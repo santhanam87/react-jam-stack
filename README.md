@@ -1,97 +1,81 @@
-### Introduction
+# Turborepo starter
 
-**Welcome to Next-Level Frontend Development!**
+This is an official starter Turborepo.
 
-Are you ready to take your frontend development skills to new heights? This course is designed to equip you with the tools and knowledge to build exceptional, high-performance web applications.
+## Using this example
 
-You'll delve into the latest and most in-demand technologies, including React, Next.js, GraphQL, and cutting-edge development practices. By the end of this course, you'll be able to create complex, scalable, and user-centric web experiences.
+Run the following command:
 
-We'll cover everything from foundational concepts to advanced techniques, ensuring you have a solid understanding of modern frontend development. Get ready to master the art of crafting intuitive and engaging user interfaces.
+```sh
+npx create-turbo@latest
+```
 
-**Let's embark on this exciting journey together!**
+## What's inside?
 
-### Section 1: Introduction to Frontend Development
+This Turborepo includes the following packages/apps:
 
-- What is Jamstack?
-  - Benefits of Jamstack architecture
-  - Comparison with traditional web development
+### Apps and Packages
 
-### Section 2: Setting Up the Development Environment
+- `docs`: a [Next.js](https://nextjs.org/) app
+- `web`: another [Next.js](https://nextjs.org/) app
+- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
-- Installing Node.js and npm (or yarn)
-- Creating a new TurboRepo project
-- Understanding TurboRepo structure
-- Setting up TypeScript, ESLint, and Prettier
-- Integrating Vite for development
-- Setting up Storybook for component development
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
-### Section 3: Core Concepts and Libraries
+### Utilities
 
-- React.js Fundamentals
-  - Components, props, state, and lifecycle methods
-  - JSX syntax
-  - Component structure and organization
-- Next.js Introduction
-  - Routing and navigation
-  - Data fetching with getStaticProps and getServerSideProps
-  - API routes
-  - Deployment options
-- GraphQL with Apollo Client
-  - GraphQL basics
-  - Querying and mutations
-  - Apollo Client setup and usage
-- State Management with Tanstack Query
-  - Data fetching and caching
-  - Optimistic updates
-  - Error handling
-- Form Handling with Zod, Zodios, and React Hook Form
-  - Data validation with Zod
-  - Generating form inputs with Zodios
-  - Form submission and error handling with React Hook Form
-- Styling with Material UI (MUI)
-  - Introduction to MUI components
-  - Customizing themes
-  - Creating reusable components
-- Internationalization with Next-Intl
-  - Setting up localization
-  - Using formatters and messages
-  - Handling different locales
+This Turborepo has some additional tools already setup for you:
 
-### Section 4: Building the Main App
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
 
-- Creating the Next.js app structure
-- Integrating UI components
-- Implementing API interactions with GraphQL
-- Managing state with Tanstack Query
-- Building complex forms with Zod, Zodios, and React Hook Form
-- Styling the app with MUI
-- Adding internationalization support
+### Build
 
-### Section 5: Advanced Topics
+To build all apps and packages, run the following command:
 
-- Performance optimization
-  - Code splitting and lazy loading
-  - Image optimization
-  - Server-side rendering (SSR)
-- Testing
-  - Unit testing with Jest
-  - Integration testing with Cypress
-  - Accessibility testing
-- Deployment
-  - Deploying to Vercel
-  - Deploying to Netlify
-  - Deploying to other platforms
-- Continuous integration and continuous delivery (CI/CD)
+```
+cd my-turborepo
+pnpm build
+```
 
-### Section 6: Additional Topics (Optional)
+### Develop
 
-- PWA development
-- Serverless functions
-- Deployment strategies
-- Advanced TurboRepo usage
-- Scaling frontend applications
+To develop all apps and packages, run the following command:
 
-### Bonus: Real-world Project
+```
+cd my-turborepo
+pnpm dev
+```
 
-- Building a complete application using the learned technologies
-- Deploying the application to production
+### Remote Caching
+
+Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+
+By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+
+```
+cd my-turborepo
+npx turbo login
+```
+
+This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+
+Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+
+```
+npx turbo link
+```
+
+## Useful Links
+
+Learn more about the power of Turborepo:
+
+- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
+- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
+- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
+- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
+- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
+- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
