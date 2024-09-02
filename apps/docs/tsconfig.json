@@ -5,7 +5,13 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@doc/*":["./app/*"],
+      "@ui/*":["../../ui-components/src/*"],
+      "@apiDef/*":["../../api-definitions/src/*"]
+    }
+    
   },
   "include": [
     "next-env.d.ts",

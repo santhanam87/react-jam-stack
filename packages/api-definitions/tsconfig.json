@@ -2,9 +2,8 @@
   "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
     "outDir": "dist",
-    "baseUrl": "./src",
     "paths": {
-      "@def/*":["./*"]
+      "@apiDef/*":["./src/*"]
     }
   },
   "include": ["src"],
