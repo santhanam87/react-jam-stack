@@ -4,7 +4,6 @@ import { test } from "@repo/api-definitions";
 import styles from "./page.module.css";
 
 export default function Home() {
-  console.info(test);
   return (
     <div className={styles.page}>
       <main className={styles.main}>
