@@ -8,16 +8,24 @@
   "scripts": {
     "lint": "eslint . --max-warnings 0"
   },
+  "peerDependencies": {
+    "zod": "^3.23.8",
+    "@zodios/core": "^10.9.6",
+    "axios": "^1.7.7"
+  },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@turbo/gen": "^1.12.4",
-    "@types/node": "^20.11.24",
     "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "@zodios/core": "^10.9.6",
+    "axios": "^1.7.7",
     "eslint": "^8.57.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "zod": "^3.23.8"
   },
   "dependencies": {
     "react": "^18.2.0"
