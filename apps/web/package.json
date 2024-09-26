@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@repo/ui-components": "*",
     "@repo/api-definitions": "*",
+    "@repo/ui-components": "*",
     "next": "14.2.6",
     "react": "18.3.1",
     "react-dom": "18.3.1"
@@ -18,11 +18,15 @@
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@tanstack/react-query": "^5.56.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@zodios/core": "^10.9.6",
+    "axios": "^1.7.7",
     "eslint": "^8",
     "eslint-config-next": "14.2.6",
-    "typescript": "^5"
+    "typescript": "^5",
+    "zod": "^3.23.8"
   }
 }
