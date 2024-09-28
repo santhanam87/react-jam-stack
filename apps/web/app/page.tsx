@@ -1,5 +1,5 @@
-import { Test } from "@repo/ui-components";
+import { Users } from "./user/users";
 
 export default function Home() {
-  return <Test />;
+  return <Users />;
 }
