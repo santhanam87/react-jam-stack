@@ -1,4 +1,4 @@
 import { Zodios, makeApi } from "@zodios/core";
-
-const api = makeApi([]);
-export const ApiClient = new Zodios("/api/", api);
+import { getUsers } from "./user/user-endpoint";
+const api = makeApi([getUsers]);
+export const ApiClient = new Zodios("http://localhost:3000/api/", api);
