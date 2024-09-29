@@ -1,7 +1,7 @@
 import { User } from "./user-type";
 
 export const GetUserKeys = {
-  getUsers: (requestBody: User.UserProfile) => {
+  getUsers: (requestBody: Partial<User.UserProfile>) => {
     return [
       {
         requestBody,

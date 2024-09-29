@@ -3,13 +3,13 @@ import { UserSchema } from "./user-schema";
 
 export const getUsers = makeEndpoint({
   method: "post",
-  path: "/users",
+  path: "user/search",
   alias: "getUsers",
   parameters: [
     {
       type: "Body",
       name: "getUsersPayload",
-      schema: UserSchema.UserProfileSchema,
+      schema: UserSchema.UserProfileSchema.partial(),
     },
   ],
   response: UserSchema.Users,
