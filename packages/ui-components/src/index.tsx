@@ -1,3 +1,3 @@
-export function Test() {
-  return <>Some test component </>;
-}
+export * from "./data-grid";
+export * from "./data-grid/mock-data";
+export * from "./theme";

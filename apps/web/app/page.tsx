@@ -1,5 +1,5 @@
-import { Users } from "./user/users";
+import DGTable from "./_dgTable/table";
 
 export default function Home() {
-  return <Users />;
+  return <DGTable />;
 }
