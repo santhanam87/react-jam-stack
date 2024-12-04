@@ -33,7 +33,10 @@ export function DGDataGrid<Row>({ data, columns }: LIDataGridProps<Row>) {
         {table.getHeaderGroups().map((headerGroup) => (
           <DGTableRow key={headerGroup.id}>
             {headerGroup.headers.map((header) => (
-              <DGTableHeaderCell key={header.id}>
+              <DGTableHeaderCell
+                sx={{ width: header.column.getSize() }}
+                key={header.id}
+              >
                 <Typography variant='button'>
                   {header.isPlaceholder
                     ? null
@@ -51,7 +54,7 @@ export function DGDataGrid<Row>({ data, columns }: LIDataGridProps<Row>) {
         {table.getRowModel().rows.map((row) => (
           <DGTableRow key={row.id}>
             {row.getVisibleCells().map((cell) => (
-              <DGTableCell key={cell.id}>
+              <DGTableCell key={cell.id} sx={{ width: cell.column.getSize() }}>
                 <Typography variant='caption'>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </Typography>
