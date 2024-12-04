@@ -1,0 +1,28 @@
+{
+  "name": "web-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -p tsconfig.json && node dist/index.js",
+    "watch": "tsc -w -p tsconfig.json & nodemon -q -w dist dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.10.1",
+    "nodemon": "^3.1.7",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@fastify/postgres": "^6.0.1",
+    "@mikro-orm/cli": "^6.4.0",
+    "@mikro-orm/core": "^6.4.0",
+    "@mikro-orm/postgresql": "^6.4.0",
+    "@mikro-orm/reflection": "^6.4.0",
+    "fastify": "^5.1.0",
+    "pg": "^8.13.1"
+  }
+}
